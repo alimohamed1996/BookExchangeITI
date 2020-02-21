@@ -16,12 +16,19 @@ import { SliderComponent } from "./components/home/slider/slider.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { RequestsComponent } from "./components/header/requests/requests.component";
 import { RequestItemComponent } from "./components/shared/request-item/request-item.component";
+
+import { AddBookComponent } from "./components/book/add-book/add-book.component";
+import { ModalComponent } from "./components/shared/modal/modal.component";
+
+import { AutocompleteLibModule } from "angular-ng-autocomplete";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+
 import { BookdetailsComponent } from './components/bookdetails/bookdetails.component';
 import { BookItemComponent } from './components/shared/book-item/book-item.component';
 import { BookListComponent } from './components/home/book-list/book-list.component';
 import { UserListComponent } from './components/home/user-list/user-list.component';
 import { UserItemComponent } from './components/shared/user-item/user-item.component';
-
 
 
 @NgModule({
@@ -35,6 +42,20 @@ import { UserItemComponent } from './components/shared/user-item/user-item.compo
     RequestsComponent,
     RequestItemComponent,
     SearchPopupComponent,
+
+    AddBookComponent,
+    ModalComponent
+  ],
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AutocompleteLibModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+
     BookdetailsComponent, 
     BookItemComponent, 
     BookListComponent, 
@@ -44,12 +65,17 @@ import { UserItemComponent } from './components/shared/user-item/user-item.compo
     SignUpPageComponent
   ],
 
+
   imports: [
     BrowserModule, 
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
   ],
+
+  imports: [BrowserModule, AppRoutingModule],
+
+
   providers: [],
   bootstrap: [AppComponent]
 })

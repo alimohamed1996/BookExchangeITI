@@ -8766,6 +8766,26 @@ a.checkout__title {
     right: 30px;
 }
 
+
+/*Add Book*/
+
+.add_book__form {
+    border: 0px;
+    border-radius: 0px;
+}
+
+.add_book__form__product_Info {
+    padding-left: 0px;
+    padding-right: 50px;
+    /* max-width: 50%; */
+}
+
+.add_book__form__product_Image {
+    /* max-width: 50%; */
+    padding-left: 50px;
+    padding-right: 0px;
+}
+
 @media only screen and (min-width: 1601px) and (max-width: 1919px) {
     .wrapper-boxed-layout {
         margin: 0 70px;
