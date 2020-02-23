@@ -1,0 +1,93 @@
+<div class="ht__bradcaump__area bg-image--6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcaump__inner text-center">
+                    <h2 class="bradcaump-title">My Account</h2>
+                    <nav class="bradcaump-content">
+                        <a class="breadcrumb_item" routerLink="">Home</a>
+                        <span class="brd-separetor">/</span>
+                        <span class="breadcrumb_item active">My Account</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <!-- <div class="nav-side-menu"> -->
+        <div class="">
+            <br>
+            <br>
+            <div class="brand1">
+                <img src='{{user?.PhotoUrl}}' style="width: 70px; height:70px; border-radius: 50%;" alt=''  class="img-circle" />
+                <div>
+                     <!-- {{user.Rate| number}} -->
+
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+
+            </div>
+            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+            <div class="menu-list">
+
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li>
+                        <a routerLink="profile">
+                            <i class="fa fa-user fa-lg"></i> Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['editprofile']">
+                            <i class="fa fa-pencil-square-o"></i> Edit Profile
+                        </a>
+                    </li>
+
+                    <li>
+                        <a routerLink="havedbooks">
+                            <i class="fa fas fa-book"></i> My Books
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="wantedbooks">
+                            <i class="fa far fa-heart"></i> Wishlists
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="searchchat">
+                            <i class="fa far fa-comments"></i> Chat
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="complaint">
+                            <i class="fa far fa-files-o"></i> Complaints
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- <router-outlet></router-outlet> -->
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+    <!-- <app-userprofile></app-userprofile> -->
+    <!-- <app-usereditprofile></app-usereditprofile>  -->
+    <!-- <app-userhavebooks></app-userhavebooks> -->
+
+    <!-- <div class="col-md-8 offset-md-1 col-sm-12">
+    <app-userwantbooks></app-userwantbooks>
+  </div> -->
+    <!-- <app-chat></app-chat> -->
+
+    <!-- <div class="col-md-10 col-sm-12">
+    <app-searchchat></app-searchchat>
+  </div> -->
+    <!-- 
+  <div class="col-md-8 offset-md-1 col-sm-12">
+    <app-complaints></app-complaints>
+  </div>
+</div> -->

@@ -841,6 +841,12 @@ a {
 
 /* Background Image */
 
+.bg-image--all {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 .bg-image--1 {
     background-image: url("http://demo.devitems.com/boighor-v3/images/bg/1.jpg");
     background-repeat: no-repeat;

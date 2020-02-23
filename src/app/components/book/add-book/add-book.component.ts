@@ -1,3 +1,4 @@
+import { BooksService } from "./../../../services/book/books.service";
 import { ServiceNameService } from "./../../../services/search/search.service";
 import { Component, OnInit, ViewChild, ViewChildren } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
@@ -16,11 +17,15 @@ export class AddBookComponent implements OnInit {
     Title: new FormControl(),
     Author_Name: new FormControl(),
     Description: new FormControl(),
-    Photo_Url: new FormControl()
+    Photo_Url: new FormControl(),
+    Want: new FormControl()
     // UserWantBook: new FormControl()
   });
 
-  constructor(private service: ServiceNameService) {}
+  constructor(
+    private service: ServiceNameService,
+    private bookService: BooksService
+  ) {}
 
   ngOnInit() {}
   keyword = "Title";
@@ -32,7 +37,8 @@ export class AddBookComponent implements OnInit {
       Title: item.Title,
       Author_Name: item.Author_Name,
       Description: item.Description,
-      Photo_Url: item.Photo_Url
+      Photo_Url: item.Photo_Url,
+      Want: "have"
     });
     this.bookImageUrl = item.Photo_Url;
     console.log(this.bookImage.src);
@@ -49,5 +55,10 @@ export class AddBookComponent implements OnInit {
 
   onFocused(e) {
     // do something when input is focused
+  }
+  addBook() {
+    console.log(this.bookService.addBook(this.form.value));
+
+    console.log(this.form.value);
   }
 }

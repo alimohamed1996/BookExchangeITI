@@ -80,7 +80,7 @@
 </div>
 <div class="modal-body">
     <div class="modal-product">
-        <form #Add_Book_Form action="#" class="modal-product" [formGroup]="form">
+        <form #Add_Book_Form class="modal-product" [formGroup]="form" (ngSubmit)="addBook()">
             <!-- Start product images -->
             <div class="product-images add_book__form__product_Image">
                 <div class="main-image images">
@@ -119,18 +119,19 @@
                             <textarea rows="4" cols="75" name="description" placeholder="Enter Descritipn of book" formControlName="Description"></textarea>
                         </div>
                         <label class="label-for-checkbox">
-                            <input id="want_book" class="input-checkbox" name="want" value="want" type="radio">
+                            <input id="want_book" class="input-checkbox" name="Want" value="want" formControlName="Want" type="radio">
                             <span>  I Want this book</span>
                         </label>
                         <br>
 
                         <label class="label-for-checkbox">
-                            <input id="heve_book" class="input-checkbox" name="want" value="have" type="radio">
+                            <input id="heve_book" class="input-checkbox" name="Want" value="have" formControlName="Want" type="radio">
                             <span>  I have this book</span>
                         </label>
                         <br>
                         <div class="form__btn">
                             <button>Add</button>
+                            <input type="submit" value="Add">
                         </div>
                     </div>
                     <!-- </form> -->
